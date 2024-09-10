@@ -326,6 +326,7 @@ const createPopper = () => defineComponent({
       containsGlobalTarget: false,
       isDisposed: true,
       mouseDownContains: false,
+      reactiveReferenceNode: this.referenceNode?.() ?? this.$el, // store reactive node here
     }
   },
 
@@ -408,6 +409,14 @@ const createPopper = () => defineComponent({
       acc[prop] = '$_computePosition'
       return acc
     }, {}),
+
+    referenceNode: {
+      immediate: true,
+      handler (newRefNode) {
+        this.reactiveReferenceNode = newRefNode?.() ?? this.$el
+        this.$_computePosition()
+      },
+    },
   },
 
   created () {
@@ -661,7 +670,7 @@ const createPopper = () => defineComponent({
         }))
       }
 
-      const data = await computePosition(this.$_referenceNode, this.$_popperNode, options)
+      const data = await computePosition(this.reactiveReferenceNode, this.$_popperNode, options)
 
       Object.assign(this.result, {
         x: data.x,
