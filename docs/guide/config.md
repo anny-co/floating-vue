@@ -98,6 +98,8 @@ export const config: FloatingVueConfig = {
       handleResize: true,
       // Hide on click outside
       autoHide: true,
+      // Close full chain of parents
+      hideParents: true,
     },
     menu: {
       $extend: 'dropdown',
