@@ -3,13 +3,13 @@ export default async function (_, _nuxt) {
 
   const nuxt = (this && this.nuxt) || _nuxt
 
-  nuxt.options.css.push('floating-vue/dist/style.css')
+  nuxt.options.css.push('@anny.co/floating-vue/dist/style.css')
 
   addPluginTemplate({
     filename: 'floating-vue.mjs',
     getContents: () => `
       import { defineNuxtPlugin } from '#imports'
-      import FloatingVue from 'floating-vue'
+      import FloatingVue from '@anny.co/floating-vue'
       
       export default defineNuxtPlugin((nuxtApp) => {
         // @TODO cutomization
@@ -17,9 +17,6 @@ export default async function (_, _nuxt) {
       })
     `,
   })
-
-  // @TODO remove when floating-ui supports native ESM
-  nuxt.options.build.transpile.push('floating-vue', '@floating-ui/core', '@floating-ui/dom')
 
   // SSR support for v-tooltip directive
   nuxt.options.vue.compilerOptions.directiveTransforms = nuxt.options.vue.compilerOptions.directiveTransforms || {}
