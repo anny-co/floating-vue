@@ -23,7 +23,7 @@
       "import": "./dist/floating-vue.js",
       "types": "./dist/index.d.ts"
     },
-    "./nuxt": "./nuxt.mjs",
+    "./nuxt": "./nuxt.js",
     "./style.css": "./dist/style.css",
     "./dist/style.css": "./dist/style.css"
   },
