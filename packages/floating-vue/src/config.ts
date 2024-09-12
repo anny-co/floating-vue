@@ -35,8 +35,6 @@ export const config: FloatingVueConfig = {
    * By default, compute autohide on 'click'.
    */
   autoHideOnMousedown: false,
-  // By default, hide parents on close
-  hideParents: true,
   // Themes
   themes: {
     tooltip: {
@@ -69,8 +67,6 @@ export const config: FloatingVueConfig = {
       handleResize: true,
       // Hide on clock outside
       autoHide: true,
-      // By default, hide parents on close
-      hideParents: true,
     },
     menu: {
       $extend: 'dropdown',

@@ -182,11 +182,6 @@ const createPopper = () => defineComponent({
       default: defaultPropFactory('autoHide'),
     },
 
-    hideParents: {
-      type: Boolean,
-      default: defaultPropFactory('hideParents'),
-    },
-
     handleResize: {
       type: Boolean,
       default: defaultPropFactory('handleResize'),
@@ -1094,7 +1089,6 @@ function handleGlobalClose (event: PopperEvent, touch: boolean) {
 
   for (let i = shownPoppers.length - 1; i >= 0; i--) {
     const popper = shownPoppers[i]
-
     try {
       const contains = popper.containsGlobalTarget = popper.mouseDownContains || popper.popperNode().contains(event.target)
       popper.pendingHide = false
@@ -1118,8 +1112,6 @@ function handleGlobalClose (event: PopperEvent, touch: boolean) {
           }
 
           // Auto hide parents
-          if (!popper.hideParents) return
-
           let parent = popper.parentPopper as PopperInstance
           while (parent) {
             if (shouldAutoHide(parent, parent.containsGlobalTarget, event)) {
