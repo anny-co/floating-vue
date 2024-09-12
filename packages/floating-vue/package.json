@@ -73,10 +73,5 @@
     "dropdown",
     "menu"
   ],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/anny-co/floating-vue",
-    "directory": "packages/floating-vue"
-  }
+  "license": "MIT"
 }
