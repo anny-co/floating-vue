@@ -1,5 +1,13 @@
 # @anny.co/floating-vue
 
+## 5.3.2
+
+### Patch Changes
+
+- Bugs
+
+  - use esm for nuxt module
+
 ## 5.3.1
 
 ### Patch Changes
