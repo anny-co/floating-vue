@@ -1120,6 +1120,8 @@ function handleGlobalClose (event: PopperEvent, touch: boolean) {
           }
 
           // Auto hide parents
+          if (!popper.hideParents) return
+
           let parent = popper.parentPopper as PopperInstance
           while (parent) {
             if (shouldAutoHide(parent, parent.containsGlobalTarget, event)) {
