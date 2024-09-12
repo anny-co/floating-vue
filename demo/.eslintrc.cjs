@@ -8,7 +8,8 @@ module.exports = {
     '@vue/standard',
   ],
   parserOptions: {
-    parser: 'babel-eslint',
+    parser: '@babel/eslint-parser',
+    requireConfigFile: false, // Avoids the need for a Babel config file if not using one
   },
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
