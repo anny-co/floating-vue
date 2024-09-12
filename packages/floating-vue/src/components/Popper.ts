@@ -1095,8 +1095,6 @@ function handleGlobalClose (event: PopperEvent, touch: boolean) {
   for (let i = shownPoppers.length - 1; i >= 0; i--) {
     const popper = shownPoppers[i]
 
-    if (!popper.hideParents) return
-
     try {
       const contains = popper.containsGlobalTarget = popper.mouseDownContains || popper.popperNode().contains(event.target)
       popper.pendingHide = false
