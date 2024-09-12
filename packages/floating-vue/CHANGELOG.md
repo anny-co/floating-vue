@@ -1,20 +1,25 @@
 # @anny.co/floating-vue
 
-## 5.3.4
+## 5.3.5
 
 ### Patch Changes
 
 - Bugs
-- 
+
   - do not prevent childs from being closed with new prop hideParents
+
+
+## 5.3.4
+
+### Patch Changes
+
+nothing
 
 ## 5.3.3
 
 ### Patch Changes
 
-- Bugs
-
-  - do not prevent childs from being closed with new prop hideParents
+nothing 
 
 ## 5.3.2
 
