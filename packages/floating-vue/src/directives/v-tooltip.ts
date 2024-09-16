@@ -62,14 +62,17 @@ function ensureDirectiveApp () {
       }
     },
     render () {
-      return this.directives.map((directive) => {
-        return h(TooltipDirective, {
-          ...directive.options,
-          ...this.$attrs,
-          shown: directive.shown || directive.options.shown,
-          key: directive.id,
-        })
-      })
+      // Wrapping all tooltips in a single <div> to avoid fragment rendering
+      return h('div', {},
+        this.directives.map((directive) => {
+          return h(TooltipDirective, {
+            ...directive.options,
+            ...this.$attrs, // Manually pass attributes
+            shown: directive.shown || directive.options.shown,
+            key: directive.id,
+          })
+        }),
+      )
     },
     devtools: {
       hide: true,
