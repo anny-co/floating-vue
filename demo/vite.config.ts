@@ -5,4 +5,9 @@ export default defineConfig({
   plugins: [
     vue(),
   ],
+  resolve: {
+    alias: {
+      'floating-vue': '@anny.co/floating-vue',
+    },
+  },
 })
