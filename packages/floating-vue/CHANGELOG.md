@@ -1,5 +1,14 @@
 # @anny.co/floating-vue
 
+## 5.3.7
+
+### Patch Changes
+
+- Bugs
+
+  - warning "Extraneous non-props attributes..." was caused by fragments
+
+
 ## 5.3.6
 
 ### Patch Changes
