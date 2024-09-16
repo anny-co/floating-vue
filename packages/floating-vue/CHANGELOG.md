@@ -1,5 +1,13 @@
 # @anny.co/floating-vue
 
+## 5.3.6
+
+### Patch Changes
+
+- Bugs
+
+  - warning "Extraneous non-props attributes..." was caused by fragments
+
 ## 5.3.5
 
 ### Patch Changes
@@ -7,7 +15,6 @@
 - Bugs
 
   - do not prevent childs from being closed with new prop hideParents
-
 
 ## 5.3.4
 
@@ -19,7 +26,7 @@ nothing
 
 ### Patch Changes
 
-nothing 
+nothing
 
 ## 5.3.2
 
