@@ -56,6 +56,7 @@ function ensureDirectiveApp () {
 
   directiveApp = createApp({
     name: 'VTooltipDirectiveApp',
+    inheritAttrs: false,
     setup () {
       return {
         directives,
