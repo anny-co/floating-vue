@@ -56,7 +56,6 @@ function ensureDirectiveApp () {
 
   directiveApp = createApp({
     name: 'VTooltipDirectiveApp',
-    inheritAttrs: false,
     setup () {
       return {
         directives,
@@ -66,6 +65,7 @@ function ensureDirectiveApp () {
       return this.directives.map((directive) => {
         return h(TooltipDirective, {
           ...directive.options,
+          ...this.$attrs,
           shown: directive.shown || directive.options.shown,
           key: directive.id,
         })
